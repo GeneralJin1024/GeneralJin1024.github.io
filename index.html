@@ -24,28 +24,30 @@
             
                 <link rel="stylesheet" href="/css/LoadingCanvas.css">
             
+                <link rel="stylesheet" href="/css/all.css">
+            
+                <link rel="stylesheet" href="/css/mdui.min.css">
+            
                 <link rel="stylesheet" href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css">
             
         
         <script src="js/baseLoading.js"></script>
     <meta name="generator" content="Hexo 4.1.1"></head>
-
-    <body>
-        <script src="https://cdn.jsdelivr.net/gh/GeneralJin1024/Desktoplive2d/autoload.js"></script>
-        <canvas id="content_canvas" width="1440"></canvas>
-        
-            <!-- scripts list from theme config.yml -->
-            
-                <script src="/js/Neptune.js"></script>
-            
-                <script src="/js/parallax.js"></script>
-            
-                <script src="/js/fallingNumber.js"></script>
-            
-        
-        
-        <div id="container">
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/GeneralJin1024/Desktoplive2d/autoload.js"></script>
+    <canvas id="content_canvas" width="1440"></canvas>
     
+        <!-- scripts list from theme config.yml -->
+        
+            <script src="/js/Neptune.js"></script>
+        
+            <script src="/js/parallax.js"></script>
+        
+            <script src="/js/fallingNumber.js"></script>
+        
+    
+    <div id="container">
+        
 <div id="screen">
     <div id="mark">
         <div class="layer" data-depth="0.00">
@@ -69,7 +71,6 @@
                   target="_blank"><img width="149" height="149" src="/img/forkme.png"
                     class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
             
-            <div class="icon-menu switchmenu"></div>
         </div>
     </div>
     
@@ -81,18 +82,18 @@
         </div>
     
     <div class="cover-learn-more">
-        <a href="#latest" class="anchor"><i class="ri-arrow-down-line"></i></a>
+        <a href="#latest" class="anchor"><i class="fas fa-chevron-circle-down"></i></a>
     </div>
 </div>
-    <div id="latest">
-        <section class="outer">
+<div id="latest">
+    <section class="outer">
   <article class="articles">
     
     <h1 class="page-type-title"></h1>
 
     
     
-    <article id="post-Test-Post-2" class="article article-type-post" itemscope
+    <article id="post-Test-Post-2" class="article article-type-post .mdui-hoverable" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -133,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/undefined/Test-Post-2/" data-id="ck50hbzi90005lsu44url59nn"
+      <a data-url="http://yoursite.com/undefined/Test-Post-2/" data-id="ck5amnaa20006xou4hts0dy3i"
         class="article-share-link"></a>
     </footer>
 
@@ -150,7 +151,7 @@
 
 </article>
     
-    <article id="post-Test-Post-1" class="article article-type-post" itemscope
+    <article id="post-Test-Post-1" class="article article-type-post .mdui-hoverable" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -190,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/undefined/Test-Post-1/" data-id="ck50hbzii0006lsu4fjp06hfb"
+      <a data-url="http://yoursite.com/undefined/Test-Post-1/" data-id="ck5amnaa10005xou42gthawih"
         class="article-share-link"></a>
     </footer>
 
@@ -207,7 +208,7 @@
 
 </article>
     
-    <article id="post-hello-world" class="article article-type-post" itemscope
+    <article id="post-hello-world" class="article article-type-post .mdui-hoverable" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -255,7 +256,7 @@ Mo...
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/undefined/hello-world/" data-id="ck50hbzhl0000lsu4bw9pdyz2"
+      <a data-url="http://yoursite.com/undefined/hello-world/" data-id="ck5amna9d0000xou4cmv31tz5"
         class="article-share-link"></a>
     </footer>
 
@@ -277,8 +278,13 @@ Mo...
 
   
 </section>
-    </div>
-    <div id="bottom-outer">
+</div>
+    
+<!--<div id="preview"></div>to do-->
+        <div class="back2top" id="back2top">
+    <i class="back2top-icon fas fa-rocket"></i>
+</div>
+        <div id="bottom-outer">
     <div id="bottom-inner">
         Site by
         Shengyu Jin using
@@ -322,9 +328,44 @@ Mo...
 </script>
     </div>
 </div>
-</div>
+    </div>
+    <aside class="sidebar">
+        <button id="sidebar-toggle" class="mdui-fab mdui-color-pink-accent mdui-ripple"><i class="mdui-icon material-icons">add</i></button>
+<nav class="navbar" id="drawer">
+    <div class="navbar-avatar">
+        <a href="/"><img src="/img/Avater.jpeg" alt="JF&#39;s Territory"></a>
+    </div>
+    <div class="navbar-count">
+        <div><span>Posts</span>3</div>
+        <div><span>Tags</span>2</div>
+        <div><span>Catagories</span>0</div>
+    </div>
+    <ul class="navbar-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="navbar-list-item mdui-list-item mdui-ripple" href="/" title="Home">
+            <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+            <div class="mdui-list-item-content">
+                Home
+            </div>
+        </a>
+        
+        <a class="navbar-list-item mdui-list-item mdui-ripple" href="/archives" title="Archives">
+            <i class="mdui-list-item-icon mdui-icon material-icons">archive</i>
+            <div class="mdui-list-item-content">
+                Archives
+            </div>
+        </a>
+        
+        <a class="navbar-list-item mdui-list-item mdui-ripple" href="/about" title="About">
+            <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+            <div class="mdui-list-item-content">
+                About
+            </div>
+        </a>
+        
+    </ul>
+</nav>
+    </aside>
+</body>
 
-<!--<div id="preview"></div>to do-->
-    </body>
-
-    </html>
+</html>
