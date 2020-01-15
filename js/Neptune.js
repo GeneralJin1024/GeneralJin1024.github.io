@@ -72,14 +72,12 @@ $(document).ready(function(){
     $('#sidebar-toggle').on('click', function () {
         if (isMobileNavAnim) return;
         startMobileNavAnim();
-        //$('#container').toggleClass('on');
         sidebar.toggleClass('on');
         stopMobileNavAnim();
     });
 
     $('#container').on('click', function () {
         if (isMobileNavAnim) return;
-        //$('#container').removeClass('on');
         sidebar.removeClass('on');
     });
 })

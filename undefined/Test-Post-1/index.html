@@ -1,16 +1,10 @@
 
-
     <!DOCTYPE html>
     <html lang="en,zh-tw,default">
 
     <head>
         <meta charset="UTF-8">
         <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-        <!-- 文字显示 -->
-        <script type="text/javascript" src="https://files.cnblogs.com/files/sunhang32/myText.js"></script>
-        <!-- 输入框特效 -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/2662419405/CDN/blog.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/2662419405/CDN/POW.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>
@@ -48,15 +42,110 @@
     
     <div id="container">
         
-<article id="post">
-  <h1>Test Post 1</h1>
-  
-</article>
-
-<div id="paginator">
-  
+<div id="screen">
+    <div id="mark">
+        <div class="layer" data-depth="0.00">
+            <img src="/img/welcome-cover-layer1.jpg" id="cover1" crossorigin="anonymous" width="1920" height="1080">
+        </div>
+        <div class="layer" data-depth="0.40">
+            <img src="/img/welcome-cover-layer2.png" id="cover2" crossorigin="anonymous" width="1920" height="1080">
+        </div>
+    </div>
+    <div id="header">
+        <div>
+            
+                
+                <a class="forkMe" href="https://github.com/GeneralJin1024/GeneralJin1024.github.io"
+                  target="_blank"><img width="149" height="149" src="/img/forkme.png"
+                    class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+            
+        </div>
+    </div>
+    <!--
+    
+        <div id="post0">
+            <p>January 02, 2020</p>
+            <h2><a href="/undefined/Test-Post-2/" title="Welcome To JF&#39;s Blog" class="posttitle">Welcome To JF&#39;s Blog</a></h2>
+            <p class="summary">Welcome to the little blog. For now, this site is still under construction and may keep up updating till next year XD.
+</p>
+        </div>
+    
+    -->
+    <div class="cover-learn-more">
+        <a href="#main" class="anchor"><i class="fas fa-chevron-circle-down"></i></a>
+    </div>
 </div>
+        <div id="main">
+            <section class="outer">
+  <article id="post-Test-Post-1" class="article article-type-post .mdui-hoverable" itemscope
+  itemprop="blogPost" data-scroll-reveal>
 
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title center" style="border-left:0" itemprop="name">
+  Test Post 1
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/undefined/Test-Post-1/" class="article-date">
+  <time datetime="2020-01-03T03:57:39.000Z" itemprop="datePublished">2020-01-02</time>
+</a>
+      
+      
+    </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      
+      
+    </div>
+    
+      
+  <nav class="article-nav">
+    
+      <a href="/undefined/Test-Post-2/" class="article-nav-link">
+        <strong class="article-nav-caption">next post</strong>
+        <div class="article-nav-title">
+          
+            Welcome To JF&#39;s Blog
+          
+        </div>
+      </a>
+    
+    
+      <a href="/undefined/hello-world/" class="article-nav-link">
+        <strong class="article-nav-caption">previous post</strong>
+        <div class="article-nav-title">Hello World</div>
+      </a>
+    
+  </nav>
+
+
+    
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/undefined/Test-Post-1/" data-id="ck5ew1o9b0006e4u4gi80a4r4"
+        class="article-share-link"></a>
+    </footer>
+
+  </div>
+
+</article>
+</section>
+
+        </div>
         <div class="back2top" id="back2top">
     <i class="back2top-icon fas fa-rocket"></i>
 </div>
@@ -65,14 +154,7 @@
         Site by
         Shengyu Jin using
             <a href="http://hexo.io" target="_blank" rel="noopener">hexo blog framework</a>.
-            <!-- 滚动进度 -->
-<div id="bottomProgressBar"></div>
-<!-- 音乐菜单 -->
-<link rel="stylesheet" href="https://blog-static.cnblogs.com/files/elkyo/APlayer.min.css">
-<div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="281024102" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>
-<script src="https://blog-static.cnblogs.com/files/elkyo/APlayer.min.js"></script>
-<script src="https://blog-static.cnblogs.com/files/elkyo/Meting.min.js"></script>
-<!-- 网站运行时间 -->
+            <!-- 网站运行时间 -->
 <p style="text-align:center;"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p>
 <script>
     var now = new Date();
@@ -97,8 +179,8 @@
         if (String(snum).length == 1) {
             snum = "0" + snum;
         }
-        document.getElementById("timeDate").innerHTML = "本站勉强运行 " + dnum + " 天 ";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+        document.getElementById("timeDate").innerHTML = "The site is barely running " + dnum + " days ";
+        document.getElementById("times").innerHTML = hnum + " hours " + mnum + " minuates " + snum + " seconds";
     }
     setInterval("createtime()", 250);
 </script>
@@ -114,9 +196,9 @@
     <div class="navbar-count">
         <div><span>Posts</span>3</div>
         <div><span>Tags</span>2</div>
-        <div><span>Catagories</span>0</div>
+        <div><span>Cat.</span>0</div>
     </div>
-    <ul class="navbar-list mdui-list" mdui-collapse="{accordion: true}">
+    <ul class="mdui-list navbar-list" mdui-collapse="{accordion: true}">
         
         <a class="navbar-list-item mdui-list-item mdui-ripple" href="/" title="Home">
             <i class="mdui-list-item-icon mdui-icon material-icons">home</i>

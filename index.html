@@ -1,16 +1,10 @@
 
-
     <!DOCTYPE html>
     <html lang="en,zh-tw,default">
 
     <head>
         <meta charset="UTF-8">
         <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-        <!-- 文字显示 -->
-        <script type="text/javascript" src="https://files.cnblogs.com/files/sunhang32/myText.js"></script>
-        <!-- 输入框特效 -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/2662419405/CDN/blog.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/2662419405/CDN/POW.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>
@@ -57,12 +51,6 @@
             <img src="/img/welcome-cover-layer2.png" id="cover2" crossorigin="anonymous" width="1920" height="1080">
         </div>
     </div>
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
     <div id="header">
         <div>
             
@@ -73,6 +61,7 @@
             
         </div>
     </div>
+    <!--
     
         <div id="post0">
             <p>January 02, 2020</p>
@@ -81,11 +70,13 @@
 </p>
         </div>
     
+    -->
     <div class="cover-learn-more">
-        <a href="#latest" class="anchor"><i class="fas fa-chevron-circle-down"></i></a>
+        <a href="#main" class="anchor"><i class="fas fa-chevron-circle-down"></i></a>
     </div>
 </div>
-<div id="latest">
+        <div id="main">
+            <div id="latest">
     <section class="outer">
   <article class="articles">
     
@@ -120,8 +111,6 @@
     </div>
     
 
-    
-
     <div class="article-entry" itemprop="articleBody">
       
 
@@ -133,21 +122,13 @@
 
       
     </div>
+    
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/undefined/Test-Post-2/" data-id="ck5amnaa20006xou4hts0dy3i"
+      <a data-url="http://yoursite.com/undefined/Test-Post-2/" data-id="ck5ew1o9a0005e4u4ch500341"
         class="article-share-link"></a>
     </footer>
 
   </div>
-  <!--
-  
-
-  
-  -->
-
-  <!--
-  
-  -->
 
 </article>
     
@@ -178,8 +159,6 @@
     </div>
     
 
-    
-
     <div class="article-entry" itemprop="articleBody">
       
 
@@ -190,21 +169,13 @@
       
       
     </div>
+    
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/undefined/Test-Post-1/" data-id="ck5amnaa10005xou42gthawih"
+      <a data-url="http://yoursite.com/undefined/Test-Post-1/" data-id="ck5ew1o9b0006e4u4gi80a4r4"
         class="article-share-link"></a>
     </footer>
 
   </div>
-  <!--
-  
-
-  
-  -->
-
-  <!--
-  
-  -->
 
 </article>
     
@@ -237,8 +208,6 @@
     </div>
     
 
-    
-
     <div class="article-entry" itemprop="articleBody">
       
 
@@ -255,21 +224,13 @@ Run server1$ hexo server
 Mo...
       
     </div>
+    
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/undefined/hello-world/" data-id="ck5amna9d0000xou4cmv31tz5"
+      <a data-url="http://yoursite.com/undefined/hello-world/" data-id="ck5ew1o8t0000e4u4ez9bdb6y"
         class="article-share-link"></a>
     </footer>
 
   </div>
-  <!--
-  
-
-  
-  -->
-
-  <!--
-  
-  -->
 
 </article>
     
@@ -281,6 +242,7 @@ Mo...
 </div>
     
 <!--<div id="preview"></div>to do-->
+        </div>
         <div class="back2top" id="back2top">
     <i class="back2top-icon fas fa-rocket"></i>
 </div>
@@ -289,14 +251,7 @@ Mo...
         Site by
         Shengyu Jin using
             <a href="http://hexo.io" target="_blank" rel="noopener">hexo blog framework</a>.
-            <!-- 滚动进度 -->
-<div id="bottomProgressBar"></div>
-<!-- 音乐菜单 -->
-<link rel="stylesheet" href="https://blog-static.cnblogs.com/files/elkyo/APlayer.min.css">
-<div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="281024102" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>
-<script src="https://blog-static.cnblogs.com/files/elkyo/APlayer.min.js"></script>
-<script src="https://blog-static.cnblogs.com/files/elkyo/Meting.min.js"></script>
-<!-- 网站运行时间 -->
+            <!-- 网站运行时间 -->
 <p style="text-align:center;"><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span></p>
 <script>
     var now = new Date();
@@ -321,8 +276,8 @@ Mo...
         if (String(snum).length == 1) {
             snum = "0" + snum;
         }
-        document.getElementById("timeDate").innerHTML = "本站勉强运行 " + dnum + " 天 ";
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+        document.getElementById("timeDate").innerHTML = "The site is barely running " + dnum + " days ";
+        document.getElementById("times").innerHTML = hnum + " hours " + mnum + " minuates " + snum + " seconds";
     }
     setInterval("createtime()", 250);
 </script>
@@ -338,9 +293,9 @@ Mo...
     <div class="navbar-count">
         <div><span>Posts</span>3</div>
         <div><span>Tags</span>2</div>
-        <div><span>Catagories</span>0</div>
+        <div><span>Cat.</span>0</div>
     </div>
-    <ul class="navbar-list mdui-list" mdui-collapse="{accordion: true}">
+    <ul class="mdui-list navbar-list" mdui-collapse="{accordion: true}">
         
         <a class="navbar-list-item mdui-list-item mdui-ripple" href="/" title="Home">
             <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
