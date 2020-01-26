@@ -108,7 +108,6 @@ h4,
 h5,
 h6 {
     font-size: 100%;
-    font-weight: normal;
 }
 
 a {
@@ -467,8 +466,7 @@ a:active {
 }
 
 /* post archive showed on index*/
-.article {
-    padding: 4.5rem 1rem;
+.article, .tagcloud {
     font-size: 150%;
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -477,6 +475,10 @@ a:active {
     border-bottom: 0.3rem #3D384B solid;
     border-radius: 1rem;
     background-color: #efefef;
+}
+
+.article {
+    padding: 4.5rem 1rem;
 }
 
 .articles .article-entry,
@@ -488,6 +490,58 @@ a:active {
     margin: 1rem 0;
     padding: 0 2rem 2rem;
     border: 1px dashed #9985C4;
+}
+
+.tagcloud .tagcloud-items{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.tagcloud h6 {
+    margin-block-start: 10px;
+    margin-block-end: 0px;
+}
+
+.tagcloud-items a {
+    border-radius: 10px;
+    padding:5px 10px;
+    color:#fff;
+    font-size:12px!important;
+    display:inline-block;
+    margin-bottom:5px;
+    box-shadow: 0 0.3rem 0.7rem 0rem rgba(2, 32, 83, 0.6);
+}
+
+.tagcloud-items a:before {
+    content: "# ";
+}
+.tagcloud-items a:nth-child(7n+1) {
+    background-color:rgba(255,78,106,.15);
+    color: rgba(255,78,106,.8);
+}
+.tagcloud-items a:nth-child(7n+2) {
+    background-color:rgba(255, 170, 115,.15);
+    color: rgb(255, 170, 115);
+}
+.tagcloud-items a:nth-child(7n+3) {
+    background-color:rgba(254, 212, 102, .15);
+    color: rgb(254, 212, 102);
+}
+.tagcloud-items a:nth-child(7n+4) {
+    background-color:rgba(60, 220, 130, .15);
+    color: rgb(60, 220, 130);
+}
+.tagcloud-items a:nth-child(7n+5) {
+    background-color:rgba(100, 220, 240, .15);
+    color: rgb(100, 220, 240);
+}
+.tagcloud-items a:nth-child(7n+6) {
+    background-color:rgba(100, 185, 255, .15);
+    color: rgb(100, 185, 255);
+}
+.tagcloud-items a:nth-child(7n+7) {
+    background-color:rgba(180, 180, 255, .15);
+    color: rgb(180, 180, 255);
 }
 
 .archive-article-inner {
