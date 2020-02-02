@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.token.selector {
+    color: black;
+}
+
+.token.property {
+    color: black;
+}
+
+.token.punctuation {
+    color: black;
+}
+
+.token.comment {
+    color: black;
+}
+
+#code,#paper {
+    overflow: auto;
+}
+#box{
+    display: flex;
+    justify-content: left;
+    align-items: top;
+}
+
+@keyframes breath {
+     0%, 100% {
+         box-shadow: 0 0 4px 3px rgba(26, 255, 179, 0), 0 0 0px 0px #333, 0 0 0px 0px rgba(26, 255, 179, 0);
+     }
+     25% {
+         box-shadow: 0 0 4px 3px #5C5CB4, 0 0 6px 5px rgba(0,255,27,.3), 0 0 6px 7px #8c00ff;
+     }
+     50% {
+         box-shadow: 0 0 4px 3px rgba(26, 255, 179, 0), 0 0 0px 0px #333, 0 0 0px 0px rgba(26, 255, 179, 0);
+     }
+     75% {
+         box-shadow: 0 0 4px 3px #5C5CB4, 0 0 6px 5px #333, 0 0 6px 7px #8c00ff;
+     }
+ }

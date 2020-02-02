@@ -97,6 +97,11 @@ body, ul, menu, dir{
     opacity: 0.5
 }
 
+#c {
+    filter: alpha(opacity: 50);
+    opacity: 0.3
+}
+
 li {
     list-style: none
 }
@@ -203,6 +208,10 @@ a:active {
 
 .cover-learn-more > a > i:hover{
     animation: down 1s infinite;
+}
+
+.layer #cover2 {
+    opacity: 0.3;
 }
 
 #latest {
@@ -729,10 +738,11 @@ a:active {
 }
 
 #bottom-outer {
-    margin-right: 1rem;
-    margin-left: 1rem;
+    position: absolute;
+    width: 100%;
     margin-bottom: 10px;
     text-decoration: solid;
+    text-align: center;
     font-size: 20px;
 }
 /* tags styles in post pages */
