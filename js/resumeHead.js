@@ -1,10 +1,10 @@
-
+$(document).ready(function(){
     document.getElementById('screen').remove();
-    document.getElementById('bottom-outer').remove();
+
     var link1 = document.createElement('link');
     link1.setAttribute('rel', 'stylesheet');
     link1.setAttribute('type', 'text/css');
-    link1.setAttribute('href', '/js/vendor/prism/prism.css');
+    link1.setAttribute('href', '/js/prism/prism.css');
     document.head.appendChild(link1);
 
     var link2 = document.createElement('link');
@@ -17,3 +17,5 @@
     style.type = 'text/css';
     style.setAttribute('id', 'myStyle')
     document.head.appendChild(style);
+
+});

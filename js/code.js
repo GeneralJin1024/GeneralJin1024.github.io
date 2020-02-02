@@ -4,10 +4,7 @@
 *{
 	transition: all 0.5s;
 }
-/*Let's change the background*/
-html{
-	background-color: blanchedalmond;
-}
+
 /*Have a border container*/
 #code{
     border-left: 0.1rem #5C5CB4 solid;
@@ -49,7 +46,7 @@ html{
 #code{
     display: inline-block;
     width: 45%;
-    height: 98%;
+    height: 90%;
     transform: translateX(125%);
     position: absolute;
 }
@@ -58,7 +55,7 @@ html{
     position: absolute;
     left: 10px;
     width: 50%;
-    height: 98%;
+    height: 90%;
     background: #fff;
     padding: 20px;
     margin-left: 20px;
