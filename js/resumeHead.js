@@ -1,6 +1,6 @@
 $(document).ready(function(){
     document.getElementById('screen').remove();
-
+    document.getElementById('c').remove();
     var link1 = document.createElement('link');
     link1.setAttribute('rel', 'stylesheet');
     link1.setAttribute('type', 'text/css');

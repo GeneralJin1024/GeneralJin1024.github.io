@@ -55,7 +55,7 @@
     position: absolute;
     left: 10px;
     width: 50%;
-    height: 90%;
+    height: 70%;
     background: #fff;
     padding: 20px;
     margin-left: 20px;
@@ -72,41 +72,34 @@ var markdown = window.markdown = `
 
 # Resume
 
-### Introduction
-
+## Introduction
    - **Name**：Shengyu(Jeff) Jin
    - **Gender**：Male
    - **Birth**：1998
    - **Location**: Columbus, Ohio, US
    - **Target Position**：Software Enginner, Game Developer
 
-### Contact：
-
+## Contact：
    - **Phone**：+1-714-454-8583, +86-13818922312	
    - **Mail**：jsy729574257@Gmail.com
    - **WeChat**：jf2655698979
    - **LinkedIn**: https://www.linkedin.com/in/shengyu-jin1024/
 
-### Academic Path
-
+## Academic Path
    - **The Ohio State University**
-    - **Computer and Information Science Major**
+   - **Computer and Information Science Major**
 
-### Skills
+## Skills
+   - **Java**, **C++**, **Android**, **javascript**, **C#**, **Unity3D**
 
-   - **Java**
-   - **C++**
-   - **Android** 
-   - **javascript** 
-   - **C#**
-   - **Unity3D**
+## projects
+   - **[project1][1]**
+   - **[project2][2]**
+   - **[project3][3]**
 
-### projects
-
-   - **project demo1[1]**
-   - **project demo2[2]**
-   - **project demo3[3]**
-
+   [1]: https://github.com/GeneralJin1024/GeneralJin1024.github.io
+   [2]: https://github.com/GeneralJin1024/MarioHasToDie
+   [3]: https://github.com/GeneralJin1024/Live2D-on-Desktop
 `;
     var changeCode = window.changeCode = `
 /*Terrible text style？ Don't worry I'll fix it in a second*/
