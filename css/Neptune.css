@@ -483,7 +483,14 @@ a:active {
     border-right: 0.1rem #5C5CB4 solid;
     border-bottom: 0.3rem #3D384B solid;
     border-radius: 1rem;
+}
+
+.article{
     background-color: #efefef;
+}
+
+.tagcloud{
+    background-color: #d8d6d6;
 }
 
 .article {
@@ -560,9 +567,9 @@ a:active {
 }
 
 .article-date::before, .archive-article-header::before {
-    content: '\eaf2';
+    content: '\f073';
     margin-right: 0.5rem;
-    font-family: remixicon;
+    font-family: "FontAwesome";
     opacity: 0.5;
 }
 
@@ -634,8 +641,8 @@ a:active {
 
 .article-tag-list:before {
     color: #5d5a5a;
-    content: "\eec3";
-    font-family: remixicon;
+    content: '\f02c';
+    font-family: "FontAwesome";
     margin-right: 0.5rem;
 }
 
@@ -683,7 +690,7 @@ a:active {
 .archives-year-warp{
     position: absolute;
     text-decoration: underline;
-    top: 4%;
+    top: 2%;
     width: 60px;
 }
 .archives-year-warp > .archives-year{
