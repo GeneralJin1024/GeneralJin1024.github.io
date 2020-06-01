@@ -62,9 +62,11 @@
     <!--
     
         <div id="post0">
-            <p>May 06, 2020</p>
-            <h2><a href="/en/VariousAlgorithms/" title="VariousAlgorithms" class="posttitle">VariousAlgorithms</a></h2>
-            <p class="summary">Record some unfamiliar algorithms1. 多数投票算法(Boyer-Moore Algorithm)详解This algorithm serves to finding the major element in a pile of data, and the occurrence of the major element is no less than 50% ...</p>
+            <p>June 01, 2020</p>
+            <h2><a href="/en/Shengyu-s-Basic-Shading-Project/" title="Shengyu&#39;s Basic Shading Project" class="posttitle">Shengyu&#39;s Basic Shading Project</a></h2>
+            <p class="summary">IntroductionThis project Demo Link implements the following features:
+
+open a window contains an OpenGL rendering area in which a circular shape should be shaded using the Phong Illumination Model ...</p>
         </div>
     
     -->
@@ -80,6 +82,153 @@
     <h1 class="page-type-title"></h1>
 
     
+    
+    <article id="post-Shengyu-s-Basic-Shading-Project" class="article article-type-post .mdui-hoverable" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/en/Shengyu-s-Basic-Shading-Project/#main">Shengyu&#39;s Basic Shading Project</a>
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/en/Shengyu-s-Basic-Shading-Project/#main" class="article-date">
+  <time datetime="2020-06-01T16:29:25.000Z" itemprop="datePublished">2020-06-01</time>
+</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CG/" rel="tag">CG</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opengl/" rel="tag">opengl</a></li></ul>
+
+      
+    </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>This project <a href="https://github.com/GeneralJin1024/Basic-Shading-Project" target="_blank" rel="noopener">Demo Link</a> implements the following features:</p>
+<ul>
+<li><p>open a window contains an OpenGL rendering area in which a circular shape should be shaded using the Phong Illumination Model for point and directional lights.</p>
+</li>
+<li><p>The circular shape should always occupy most of the window. If the window is resized it should update the display so that the shape still occupies most of the window and is still round. (In this context “most” would mean that the diameter of the circle should be 90% of the smaller of the window’s height or width.)</p>
+</li>
+<li><p>Press arrow keys to move the circular shape, and either ESC key or Q to terminate the program and close the window.</p>
+</li>
+</ul>
+<h1 id="Command-Lane-Arguments"><a href="#Command-Lane-Arguments" class="headerlink" title="Command Lane Arguments"></a>Command Lane Arguments</h1><p>All the command line arguments are optional. The default values should be a black sphere with no lights. That is the program display a black circular shape on a black(default) background. If material parameters are multiply specified, the last value should be used. </p>
+<blockquote>
+<p>-ka r g b  </p>
+</blockquote>
+<ul>
+<li>This is the ambient color coefficients of the sphere material. The parameters r g b are numbers between 0 and 1 inclusive. </li>
+</ul>
+<blockquote>
+<p>-kd r g b  </p>
+</blockquote>
+<ul>
+<li>This is the diffuse color coefficients of the sphere material. The parameters r g b are numbers between 0 and 1 inclusive.</li>
+</ul>
+<blockquote>
+<p>-ks r g b</p>
+</blockquote>
+<ul>
+<li>This is the specular color coefficients of the sphere material. The parameters r g b are numbers between 0 and 1 inclusive. </li>
+</ul>
+<blockquote>
+<p>-spu pu</p>
+</blockquote>
+<ul>
+<li>This is the power coefficient on the specular term in the u direction for an anisotropic material. It is a number between 0 and max_float.</li>
+</ul>
+<blockquote>
+<p>-spv pv</p>
+</blockquote>
+<ul>
+<li>This is the power coefficient on the specular term in the v direction for an anisotropic material. It is a number between 0 and max_float.</li>
+</ul>
+<blockquote>
+<p>-sp p</p>
+</blockquote>
+<ul>
+<li>This is the power coefficient on the specular term for an isotropic material. It is a number between 0 and max_float.  (i.e. the same as setting pu and pv the the same value.) </li>
+</ul>
+<blockquote>
+<p>-pl x y z r g b </p>
+</blockquote>
+<ul>
+<li>This adds a point light to the scene. The x y z values are the location of the light. The r g b values are it’s color. Note that the x y z values are relative to the sphere. That is, the center of the sphere is at the origin and the radius of the sphere defines one unit of length. The Y direction is UP, the X direction is to the right on the screen, and the Z direction is “in your face.” The r g b value are between 0 and max_float, NOT between 0 and 1 (that is, the r g b values encode the brightness of the light). </li>
+</ul>
+<blockquote>
+<p>-dl x y z r g b</p>
+</blockquote>
+<ul>
+<li>This adds a directional light to the scene. The x y z values are the direction that the light points in. The r g b values are it’s color. See -pl for coordinate system notes.</li>
+</ul>
+<blockquote>
+<p>-bgbmp fp</p>
+</blockquote>
+<ul>
+<li>This tells which .BMP file would be used as the custom background image.</li>
+</ul>
+<blockquote>
+<p>-bgppm fp</p>
+</blockquote>
+<ul>
+<li>This tells which .ppm file would be used as the custom background image.</li>
+</ul>
+<p><strong>Specifications:</strong></p>
+<ul>
+<li><p>There may be up to 5 point lights and 5 directional lights (10 total) in a scene. Image r g b values of 1.0 should be mapped to a display values of 255.</p>
+</li>
+<li><p>The coordinate system you use in your program should have a unit sphere at the origin and the viewer looking down the Z-axis. The X-axis points to the right of the screen, the Y-axis points up, and the viewer is located infinitely far away in the positive Z direction.  You should assume that the vector from eye to the surface will always be -Z. </p>
+</li>
+<li><p>All the background image would automatically fill the screen when the screen has been resized.</p>
+</li>
+</ul>
+<h1 id="Gallery"><a href="#Gallery" class="headerlink" title="Gallery"></a>Gallery</h1><p>The shading results generated from my program.</p>
+<p><img src="https://raw.githubusercontent.com/GeneralJin1024/Basic-Shading-Project/master/Demo/assignment1-1.png" alt="Sample1"></p>
+<blockquote>
+<p>assignment1 -ka 0.1745 0.01175 0.01175 -kd 0.61424 0.04136 0.04136 -ks 0.727811 0.626959 0.626959 -sp 76.8 -bgbmp sampleBG2.BMP -dl -0.5 0.1234 -0.42 0.235 0.263 0.5 -pl 1.512 1.123 1.132 0.125 0.643 0.6423 -dl 0.125 0.125 0.125 0.125 0.125 0.125 -dl 0.6423 0.346 0.634 0.124 0.623 0.623 -dl 0.12312 0.512 0.1231 0.1231 0.123 0.5612 -dl 0.125 0.1245 0.321 1 1 1 -pl 1.512 1.3123 1.312 0.123 0.6236 0.623 -pl 1.1236 1.1236 1.6234 0.23460 0.3462 0.2346 -pl 1.2346 1.6342 1.423 0.123 0.632 0.6432 -pl 1.1236 1.6423 1.6423 0.123 0.632 0.6432</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/GeneralJin1024/Basic-Shading-Project/master/Demo/assignment1-2.png" alt="Sample2"></p>
+<blockquote>
+<p>assignment1 -ka 0.2125 0.1275 0.054 -kd 0.714 0.4284 0.18144 -ks 0.393548 0.271906 0.166721 -sp 25.6 -bgbmp gray.BMP -dl -0.5 0.1234 -0.42 0.235 0.263 0.5 -pl 1.512 1.123 1.132 0.125 0.643 0.6423</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/GeneralJin1024/Basic-Shading-Project/master/Demo/assignment1-3.png" alt="Sample3"></p>
+<blockquote>
+<p>assignment1 -ka 0.25 0.25 0.25 -kd 0.4 0.4 0.4 -ks 0.774597 0.774597 0.774597 -spu 10 -spv 70 -bgppm samplebg1.ppm -pl 1.512 1.123 1.132 1 1 1 -dl 0.12312 0.512 0.1231 0.1231 0.123 0.5612</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/GeneralJin1024/Basic-Shading-Project/master/Demo/assignment1-4.png" alt="Sample4"></p>
+<blockquote>
+<p>assignment1 -ka 0 0 0 -kd 0.01 0.01 0.01 -ks 0.5 0.5 0.5 -spu 75 -spv 5 -bgppm samplebg1.ppm -dl -0.5 0.1234 -0.42 0.235 0.263 0.5 -pl 1.512 1.123 1.132 0.125 0.643 0.6423 -dl 0.125 0.125 0.125 0.125 0.125 0.125 -dl 0.6423 0.346 0.634 0.124 0.623 0.623 -dl 0.12312 0.512 0.1231 0.1231 0.123 0.5612 -dl 0.125 0.1245 0.321 1 1 1</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/GeneralJin1024/Basic-Shading-Project/master/Demo/assignment1-5.png" alt="Sample5"></p>
+<blockquote>
+<p>assignment1 -ka 0 0 0 -kd 0.01 0.01 0.01 -ks 0.5 0.5 0.5 -sp 32 -bgppm samplebg1.ppm -dl -0.5 0.1234 -0.42 0.235 0.263 0.5 -pl 1.512 1.123 1.132 0.125 0.643 0.6423 -dl 0.125 0.125 0.125 0.125 0.125 0.125 -dl 0.6423 0.346 0.634 0.124 0.623 0.623 -dl 0.12312 0.512 0.1231 0.1231 0.123 0.5612 -dl 0.125 0.1245 0.321 1 1 1 -pl 1.2346 1.6342 1.423 0.123 0.632 0.6432 -pl 1.1236 1.6423 1.6423 0.123 0.632 0.6432 -pl 1.512 1.3123 1.312 0.123 0.6236 0.623 -pl 1.1236 1.1236 1.6234 0.23460 0.3462 0.2346</p>
+</blockquote>
+
+      
+    </div>
+    
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/en/Shengyu-s-Basic-Shading-Project/" data-id="ckawrw8dx0006yku45xej4a8v"
+        class="article-share-link"></a>
+    </footer>
+
+  </div>
+
+</article>
     
     <article id="post-VariousAlgorithms" class="article article-type-post .mdui-hoverable" itemscope
   itemprop="blogPost" data-scroll-reveal>
@@ -136,7 +285,7 @@
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/VariousAlgorithms/" data-id="ck9w6gum60000g4u47yfk6mbi"
+      <a data-url="http://yoursite.com/en/VariousAlgorithms/" data-id="ckawrw8dv0005yku409rqco5y"
         class="article-share-link"></a>
     </footer>
 
@@ -204,7 +353,7 @@
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/Dynamic-Programming-Specification/" data-id="ck9vm0ys3000280u43g1vd2hr"
+      <a data-url="http://yoursite.com/en/Dynamic-Programming-Specification/" data-id="ckawrw8dr0002yku4frjx0lab"
         class="article-share-link"></a>
     </footer>
 
@@ -269,7 +418,7 @@
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/About-Me/" data-id="ck9vm0ysa000580u49t9b3hfm"
+      <a data-url="http://yoursite.com/en/About-Me/" data-id="ckawrw8do0001yku497an45fp"
         class="article-share-link"></a>
     </footer>
 
@@ -340,7 +489,7 @@
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/Leet-Code-Selected-Java-Solutions/" data-id="ck9vm0ys8000480u4fn9v0mg8"
+      <a data-url="http://yoursite.com/en/Leet-Code-Selected-Java-Solutions/" data-id="ckawrw8du0004yku400l916nt"
         class="article-share-link"></a>
     </footer>
 
@@ -387,7 +536,7 @@
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/undefined/Test-Post-2/" data-id="ck9vm0yry000180u4b0uohq2f"
+      <a data-url="http://yoursite.com/undefined/Test-Post-2/" data-id="ckawrw8ed000myku446sxaikt"
         class="article-share-link"></a>
     </footer>
 
@@ -454,8 +603,8 @@
         <a href="/"><img src="/img/Avater.jpeg" alt="JF&#39;s Territory"></a>
     </div>
     <div class="navbar-count">
-        <div><span>Posts</span>5</div>
-        <div><span>Tags</span>4</div>
+        <div><span>Posts</span>6</div>
+        <div><span>Tags</span>7</div>
     </div>
     <ul class="navbar-list mdui-list" mdui-collapse="{accordion: true}">
         
