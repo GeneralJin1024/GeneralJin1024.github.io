@@ -187,6 +187,18 @@ open a window contains an OpenGL rendering area in which a circular shape should
 <ul>
 <li>This tells which .ppm file would be used as the custom background image.</li>
 </ul>
+<blockquote>
+<p>-toon</p>
+</blockquote>
+<ul>
+<li>switch to the toon shading</li>
+</ul>
+<blockquote>
+<p>-pixellation</p>
+</blockquote>
+<ul>
+<li>apply the pixellation effect on the final image</li>
+</ul>
 <p><strong>Specifications:</strong></p>
 <ul>
 <li><p>There may be up to 5 point lights and 5 directional lights (10 total) in a scene. Image r g b values of 1.0 should be mapped to a display values of 255.</p>
@@ -217,12 +229,24 @@ open a window contains an OpenGL rendering area in which a circular shape should
 <blockquote>
 <p>assignment1 -ka 0 0 0 -kd 0.01 0.01 0.01 -ks 0.5 0.5 0.5 -sp 32 -bgppm samplebg1.ppm -dl -0.5 0.1234 -0.42 0.235 0.263 0.5 -pl 1.512 1.123 1.132 0.125 0.643 0.6423 -dl 0.125 0.125 0.125 0.125 0.125 0.125 -dl 0.6423 0.346 0.634 0.124 0.623 0.623 -dl 0.12312 0.512 0.1231 0.1231 0.123 0.5612 -dl 0.125 0.1245 0.321 1 1 1 -pl 1.2346 1.6342 1.423 0.123 0.632 0.6432 -pl 1.1236 1.6423 1.6423 0.123 0.632 0.6432 -pl 1.512 1.3123 1.312 0.123 0.6236 0.623 -pl 1.1236 1.1236 1.6234 0.23460 0.3462 0.2346</p>
 </blockquote>
+<p><img src="https://raw.githubusercontent.com/GeneralJin1024/Basic-Shading-Project/master/Demo/toon1-1.png" alt="Sample6"></p>
+<blockquote>
+<p>-ka 0 0 0 -kd 0.652 0.232 0.612 -sp 30 -ks 0.65 0.30 0.12 -dl -0.5 0.1234 -0.42 0.235 0.263 0.5 -pl 1.512 1.123 1.132 0.125 0.643 0.6423 -dl 0.125 0.125 0.125 0.125 0.125 0.125 -dl 0.6423 0.346 0.634 0.124 0.623 0.623 -dl 0.12312 0.512 0.1231 0.1231 0.123 0.5612 -dl 0.125 0.1245 0.321 1 1 1 -pl 1.512 1.3123 1.312 0.123 0.6236 0.623 -pl 1.1236 1.1236 1.6234 0.23460 0.3462 0.2346 -pl 1.2346 1.6342 1.423 0.123 0.632 0.6432 -pl 1.1236 1.6423 1.6423 0.123 0.632 0.6432 -toon</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/GeneralJin1024/Basic-Shading-Project/master/Demo/pixellation.png" alt="Sample7"></p>
+<blockquote>
+<p>assignment1 -ka 0.1745 0.01175 0.01175 -kd 0.61424 0.04136 0.04136 -ks 0.727811 0.626959 0.626959 -sp 76.8 -bgbmp sampleBG2.BMP -dl -0.5 0.1234 -0.42 0.235 0.263 0.5 -pl 1.512 1.123 1.132 0.125 0.643 0.6423 -dl 0.125 0.125 0.125 0.125 0.125 0.125 -dl 0.6423 0.346 0.634 0.124 0.623 0.623 -dl 0.12312 0.512 0.1231 0.1231 0.123 0.5612 -dl 0.125 0.1245 0.321 1 1 1 -pl 1.512 1.3123 1.312 0.123 0.6236 0.623 -pl 1.1236 1.1236 1.6234 0.23460 0.3462 0.2346 -pl 1.2346 1.6342 1.423 0.123 0.632 0.6432 -pl 1.1236 1.6423 1.6423 0.123 0.632 0.6432 -pixellation</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/GeneralJin1024/Basic-Shading-Project/master/Demo/pixellation1-3.png" alt="Sample8"></p>
+<blockquote>
+<p>assignment1 -ka 0.25 0.25 0.25 -kd 0.4 0.4 0.4 -ks 0.774597 0.774597 0.774597 -spu 10 -spv 70 -bgppm samplebg1.ppm -pl 1.512 1.123 1.132 1 1 1 -dl 0.12312 0.512 0.1231 0.1231 0.123 0.5612 -pixellation</p>
+</blockquote>
 
       
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/Shengyu-s-Basic-Shading-Project/" data-id="ckawrw8dx0006yku45xej4a8v"
+      <a data-url="http://yoursite.com/en/Shengyu-s-Basic-Shading-Project/" data-id="ckbdsz2ia0001u8u4gdrnfdk9"
         class="article-share-link"></a>
     </footer>
 
@@ -285,7 +309,7 @@ open a window contains an OpenGL rendering area in which a circular shape should
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/VariousAlgorithms/" data-id="ckawrw8dv0005yku409rqco5y"
+      <a data-url="http://yoursite.com/en/VariousAlgorithms/" data-id="ckbdsz2ii0005u8u4bz4ocvt7"
         class="article-share-link"></a>
     </footer>
 
@@ -353,7 +377,7 @@ open a window contains an OpenGL rendering area in which a circular shape should
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/Dynamic-Programming-Specification/" data-id="ckawrw8dr0002yku4frjx0lab"
+      <a data-url="http://yoursite.com/en/Dynamic-Programming-Specification/" data-id="ckbdsz2id0002u8u46x753me6"
         class="article-share-link"></a>
     </footer>
 
@@ -418,7 +442,7 @@ open a window contains an OpenGL rendering area in which a circular shape should
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/About-Me/" data-id="ckawrw8do0001yku497an45fp"
+      <a data-url="http://yoursite.com/en/About-Me/" data-id="ckbdsz2j1000mu8u4cubp3vej"
         class="article-share-link"></a>
     </footer>
 
@@ -489,7 +513,7 @@ open a window contains an OpenGL rendering area in which a circular shape should
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/Leet-Code-Selected-Java-Solutions/" data-id="ckawrw8du0004yku400l916nt"
+      <a data-url="http://yoursite.com/en/Leet-Code-Selected-Java-Solutions/" data-id="ckbdsz2ij0006u8u4gxbf7tky"
         class="article-share-link"></a>
     </footer>
 
@@ -536,7 +560,7 @@ open a window contains an OpenGL rendering area in which a circular shape should
     </div>
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/undefined/Test-Post-2/" data-id="ckawrw8ed000myku446sxaikt"
+      <a data-url="http://yoursite.com/undefined/Test-Post-2/" data-id="ckbdsz2ih0004u8u43vld3oij"
         class="article-share-link"></a>
     </footer>
 
