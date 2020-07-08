@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>
-            VariousAlgorithms [ JF&#39;s Territory ]
+            Ray-tracing [ JF&#39;s Territory ]
         </title>
 
         
@@ -79,7 +79,7 @@ Use simple Phong Sha...</p>
 </div>
         <div id="main">
             <section class="outer">
-  <article id="post-VariousAlgorithms" class="article article-type-post .mdui-hoverable" itemscope
+  <article id="post-Ray-tracing" class="article article-type-post .mdui-hoverable" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -87,7 +87,7 @@ Use simple Phong Sha...</p>
     <header class="article-header">
        
 <h1 class="article-title center" style="border-left:0" itemprop="name">
-  VariousAlgorithms
+  Ray-tracing
 </h1>
   
 
@@ -96,11 +96,11 @@ Use simple Phong Sha...</p>
 
     
     <div class="article-meta">
-      <a href="/en/VariousAlgorithms/#main" class="article-date">
-  <time datetime="2020-05-07T02:31:49.000Z" itemprop="datePublished">2020-05-06</time>
+      <a href="/en/Ray-tracing/#main" class="article-date">
+  <time datetime="2020-07-08T09:32:00.000Z" itemprop="datePublished">2020-07-08</time>
 </a>
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithms/" rel="tag">Algorithms</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CG/" rel="tag">CG</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c++</a></li></ul>
 
       
     </div>
@@ -113,44 +113,96 @@ Use simple Phong Sha...</p>
       
 
       
-      <h1 id="Record-some-unfamiliar-algorithms"><a href="#Record-some-unfamiliar-algorithms" class="headerlink" title="Record some unfamiliar algorithms"></a>Record some unfamiliar algorithms</h1><h2 id="1-多数投票算法-Boyer-Moore-Algorithm-详解"><a href="#1-多数投票算法-Boyer-Moore-Algorithm-详解" class="headerlink" title="1. 多数投票算法(Boyer-Moore Algorithm)详解"></a>1. 多数投票算法(Boyer-Moore Algorithm)详解</h2><p><strong>This algorithm serves to finding the major element in a pile of data, and the occurrence of the major element is no less than 50% of the whole.</strong></p>
-<h3 id="Question-Description"><a href="#Question-Description" class="headerlink" title="Question Description:"></a>Question Description:</h3><p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times. (Leetcode 169)  </p>
-<h3 id="Brute-force"><a href="#Brute-force" class="headerlink" title="Brute force"></a>Brute force</h3><blockquote>
-<p>HashMap  </p>
-</blockquote>
+      <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>This project <a href="https://github.com/GeneralJin1024/Ray-tracing" target="_blank" rel="noopener">Demo Link</a> consists of basic ray-tracing functions and many extra features.  </p>
+<p>Following features have been implemented:</p>
+<ul>
+<li>Render polygons </li>
+<li>Render spheres</li>
+<li>Use simple Phong Shading (in color)</li>
+<li>Compute shadows</li>
+<li>Compute reﬂections</li>
+<li>Use point lights</li>
+<li>Write its output to a standard image format(.ppm).</li>
+<li>Depth of field</li>
+<li>Anti-aliasing</li>
+<li>Transparency with refraction</li>
+<li>Use AABB tree to accelerate the computations</li>
+<li>Use iterative flows to trace the bounce rays, instead of recursion.</li>
+<li>Toon shading</li>
+</ul>
+<h1 id="Inputs"><a href="#Inputs" class="headerlink" title="Inputs"></a>Inputs</h1><p>The inputs include two parts: command lane arguments and an input file(writen in .nnf format)</p>
+<h2 id="Command-Lane-Arguments"><a href="#Command-Lane-Arguments" class="headerlink" title="Command Lane Arguments"></a>Command Lane Arguments</h2><p>All the command line arguments are optional. The default values for each object on the screen is its ambient color. Other pixels will be filled with background color. Detailed specifications are written in the input file.</p>
 <blockquote>
-<p>Double loop</p>
+<p>-c</p>
 </blockquote>
-<h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3><p>This algorithm logically partitions the elements to two sections. One is the section contains only major elements and the other one contains any other elements.  </p>
-<p>该算法时间复杂度为O(n)，空间复杂度为O(1)，只需要对原数组进行两趟扫描，并且简单易实现。第一趟扫描我们得到一个候选节点candidate，第二趟扫描我们判断candidate出现的次数是否大于⌊ n/2 ⌋。  </p>
-<p>第一趟扫描中，我们需要记录2个值：  </p>
-<p>candidate，初值可以为任何数<br>count，初值为0<br>之后，对于数组中每一个元素，首先判断count是否为0，若为0，则把candidate设置为当前元素。之后判断candidate是否与当前元素相等，若相等则count+=1，否则count-=1。  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int majorityElement(int[] nums) &#123;</span><br><span class="line">        int count &#x3D; 0;</span><br><span class="line">        Integer candidate &#x3D; null;</span><br><span class="line"></span><br><span class="line">        for (int num : nums) &#123;</span><br><span class="line">            if (count &#x3D;&#x3D; 0) &#123;</span><br><span class="line">                candidate &#x3D; num;</span><br><span class="line">            &#125;</span><br><span class="line">            count +&#x3D; (num &#x3D;&#x3D; candidate) ? 1 : -1;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return candidate;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Extension"><a href="#Extension" class="headerlink" title="Extension"></a>Extension</h3><p>分布式Boyer-Moore<br>Boyer-Moore还有一个优点，那就是可以使用并行算法实现。相关算法可见<a href="http://www.crm.umontreal.ca/pub/Rapports/3300-3399/3302.pdf" target="_blank" rel="noopener">Finding the Majority Element in Parallel</a><br>其基本思想为对原数组采用分治的方法，把数组划分成很多段(每段大小可以不相同)，在每段中计算出candidate-count二元组，然后得到最终结果。</p>
-<p>举个例子，原数组为[1,1,0,1,1,0,1,0,0]<br>划分1：<br>[1,1,0,1,1] –&gt; (candidate,count)=(1,3)<br>划分2：<br>[0,1,0,0] –&gt; (candidate,count)=(0,2)<br>根据(1,3)和(0,2)可得，原数组的多数元素为1.</p>
-<p>正因为这个特性，考虑若要从一个非常大的数组中寻找多数元素，数据量可能多大数百G，那么我们甚至可以用MapReduce的方式来解决这个问题。</p>
-<h3 id="以上中文解析转载自https-blog-csdn-net-kimixuchen-article-details-52787307"><a href="#以上中文解析转载自https-blog-csdn-net-kimixuchen-article-details-52787307" class="headerlink" title="以上中文解析转载自https://blog.csdn.net/kimixuchen/article/details/52787307"></a>以上中文解析转载自<a href="https://blog.csdn.net/kimixuchen/article/details/52787307" target="_blank" rel="noopener">https://blog.csdn.net/kimixuchen/article/details/52787307</a></h3><h3 id="More-Algorithms-are-coming"><a href="#More-Algorithms-are-coming" class="headerlink" title="More Algorithms are coming!!!"></a>More Algorithms are coming!!!</h3>
+<ul>
+<li>This command tells the programm to shade the objects(i.e. running phone shading or toon shading)</li>
+</ul>
+<blockquote>
+<p>-d %g</p>
+</blockquote>
+<ul>
+<li>This command provides an integer value limiting the number of bounces in reflection and refraction.</li>
+</ul>
+<blockquote>
+<p>-phone</p>
+</blockquote>
+<ul>
+<li>Switch to phone shading(default)</li>
+</ul>
+<blockquote>
+<p>-toon</p>
+</blockquote>
+<ul>
+<li>Switch to toon shading(the last command on switching shading methods will be applied)</li>
+</ul>
+<blockquote>
+<p>-samples %g</p>
+</blockquote>
+<ul>
+<li>Set the number of samples(%g * %g) to be collected to determine each pixel(if greater than one, then automatically run anti-aliasing)</li>
+</ul>
+<blockquote>
+<p>-aabb</p>
+</blockquote>
+<ul>
+<li>Set to use aabb-tree data structure</li>
+</ul>
+<blockquote>
+<p>-iter</p>
+</blockquote>
+<ul>
+<li>Set to shift from recursion to iteration bounce ray tracing.</li>
+</ul>
+<h2 id="Input-files"><a href="#Input-files" class="headerlink" title="Input files"></a>Input files</h2><p><a href="https://github.com/GeneralJin1024/Ray-tracing/blob/master/NFF.TXT" target="_blank" rel="noopener">Specifications</a></p>
+<p>In addition, I added three extra parameters–rr rg rb following the fill color and shading parameters to provide the reflective attenuation, which makes the rendering of image easier.</p>
+<h1 id="Gallery"><a href="#Gallery" class="headerlink" title="Gallery"></a>Gallery</h1><p>The tracing results generated from my program. All the input datasets were from the Internet.  </p>
+<blockquote>
+<p>Environment: Windows10, i7-8750H 2.20GHz CPU, VS Code</p>
+</blockquote>
+<h2 id="teapot-nff"><a href="#teapot-nff" class="headerlink" title="teapot.nff"></a><a href="https://github.com/GeneralJin1024/Ray-tracing/blob/master/demo/teapot.nnf" target="_blank" rel="noopener">teapot.nff</a></h2><p><img src="https://raw.githubusercontent.com/GeneralJin1024/Ray-tracing/master/demo/teapot%20normal.png" alt="Sample1"></p>
+<blockquote>
+<p>Command Line Arguments: raytracer trace -c (-aabb) teapot.nnf teapot.ppm  </p>
+</blockquote>
+<p>Total time: 3267.89s(normal structure &amp; flow)</p>
+<p>Total time: Wait for test(use AABB tree)</p>
+<h2 id="balls-nff"><a href="#balls-nff" class="headerlink" title="balls.nff"></a><a href="https://github.com/GeneralJin1024/Ray-tracing/blob/master/demo/balls-demo1.nnf" target="_blank" rel="noopener">balls.nff</a></h2><p><img src="https://raw.githubusercontent.com/GeneralJin1024/Ray-tracing/master/demo/balls-demo1.png" alt="Sample2"></p>
+<blockquote>
+<p>Command Line Arguments: raytracer trace -c (-aabb) balls.nnf balls.ppm  </p>
+</blockquote>
+<h3 id="More-pictures-are-coming-soon"><a href="#More-pictures-are-coming-soon" class="headerlink" title="More pictures are coming soon!"></a>More pictures are coming soon!</h3>
       
     </div>
     
       
   <nav class="article-nav">
     
+    
       <a href="/en/Shengyu-s-Basic-Shading-Project/" class="article-nav-link">
-        <strong class="article-nav-caption">Previous Post</strong>
-        <div class="article-nav-title">
-          
-            Shengyu&#39;s Basic Shading Project
-          
-        </div>
-      </a>
-    
-    
-      <a href="/en/Dynamic-Programming-Specification/" class="article-nav-link">
         <strong class="article-nav-caption">Next Post</strong>
         <div class="article-nav-title">
           
-            Dynamic-Programming-Specification
+            Shengyu&#39;s Basic Shading Project
           
         </div>
       </a>
@@ -160,7 +212,7 @@ Use simple Phong Sha...</p>
 
     
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/en/VariousAlgorithms/" data-id="ckcdii9p800055ou49xwrhacv"
+      <a data-url="http://yoursite.com/en/Ray-tracing/" data-id="ckcdii9p400045ou42natdgp0"
         class="article-share-link"></a>
     </footer>
 
